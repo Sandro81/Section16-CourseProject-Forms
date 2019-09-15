@@ -26,10 +26,11 @@
                  class="form-control"
                  id="imagePath"
                  formControlName="imagePath"
+                 #imagePath
           >
         </div>
         <div class="form-group">
-          <img src="" alt="" class="img-responsive">
+          <img [src]="imagePath.value" alt="" class="img-responsive">
         </div>
         <div class="form-group">
           <label for="description">Description</label>
@@ -59,7 +60,10 @@
                 >
               </div>
               <div class="col">
-                <button type="submit" class="btn btn-outline-warning">X</button>
+                <button
+                  type="button"
+                  class="btn btn-outline-warning"
+                (click)="onDeleteIngredient(i)">X</button>
               </div>
             </div>
             <hr>
