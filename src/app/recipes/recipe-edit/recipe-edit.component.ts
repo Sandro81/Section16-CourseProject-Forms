@@ -53,8 +53,8 @@ export class RecipeEditComponent implements OnInit {
             new FormGroup({
                 'name': new FormControl(ingredient.name),
                 'amount': new FormControl(ingredient.amount)
-            });
-          )
+            })
+          );
         }
       }
     }
